@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دبي</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #0066cc;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        .marquee {
+            background-color: #004080;
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        .marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 15s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .image-slider {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .image-slider img {
+            scroll-snap-align: start;
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .description {
+            background-color: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: right;
+        }
+        .description h2 {
+            color: #0066cc;
+        }
+        .video-container {
+            margin: 20px auto;
+            width: 90%;
+            max-width: 600px;
+        }
+        video {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .places-list {
+            background-color: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: right;
+        }
+        .places-list h2 {
+            color: #0066cc;
+        }
+        .places-list ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .places-list li {
+            margin: 10px 0;
+        }
+        .buttons {
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .buttons a {
+            background-color: #0066cc;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .buttons a:hover {
+            background-color: #004080;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <header>
+        دبي، الإمارات
+    </header>
+
+    
+    <div class="marquee">
+        <span>مرحبًا بكم في دبي! استمتعوا باستكشاف المدينة الأكثر إثارة في العالم.</span>
+    </div>
+
+    
+    <div class="image-slider">
+        <img src="dubai2.jpg" alt="برج خليفة">
+        <img src="dubai3.jpg" alt="دبي مول">
+        <img src="dubai4.jpg" alt="نخلة جميرا">
+        <img src="dubai5.jpg" alt="صحراء دبي">
+    </div>
+
+    
+    <div class="description">
+        <h2>عن دبي</h2>
+        <p>
+            دبي هي مدينة عالمية تشتهر بأبراجها الشاهقة مثل برج خليفة، وأكبر مراكز التسوق في العالم، والمناظر الصحراوية الفريدة. تعد دبي وجهة سياحية رائدة تجمع بين الحداثة والتراث.
+        </p>
+    </div>
+
+    
+    <div class="video-container">
+        <video controls>
+            <source src="dubaiv.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+    </div>
+
+    
+    <div class="places-list">
+        <h2>أفضل الأماكن السياحية في دبي</h2>
+        <ul>
+            <li><strong>برج خليفة:</strong> أطول مبنى في العالم، يوفر إطلالة رائعة على المدينة.</li>
+            <li><strong>دبي مول:</strong> أكبر مركز تسوق في العالم، ويضم حديقة دبي للأحياء المائية.</li>
+            <li><strong>نخلة جميرا:</strong> جزيرة اصطناعية على شكل نخلة، تضم فنادق فاخرة ومنتجعات.</li>
+            <li><strong>صحراء دبي:</strong> استمتع برحلات السفاري والتزلج على الرمال.</li>
+        </ul>
+    </div>
+
+    
+    <div class="buttons">
+        <a href="elbawabeh.html">العودة إلى الصفحة الرئيسية</a>
+        <a href="booking.html">حجز التذكرة</a>
+    </div>
+
+</body>
+</html>

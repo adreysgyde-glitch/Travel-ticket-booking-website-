@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta "auther" content="hesham taha">
+    <title>بوابة للرحلات</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fefeff;
+            color: #000000;
+            text-align: center;
+            margin: 0;   
+            padding: 0;
+        }
+      
+        header {
+            background-color: #0066cc;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        .marquee {
+            background-color: #023d79;
+            color: rgb(236, 236, 236);
+            padding: 10px;
+            font-size: 18px;
+            white-space: nowrap; 
+            overflow: hidden;  
+            box-sizing: border-box;  
+        }
+        .marquee span {
+            display: inline-block;
+            padding-left:10%;
+            animation: marquee 15s linear infinite; 
+        }
+        @keyframes marquee {
+            0% { transform: translateX(100%); }  
+            100% { transform: translateX(-100%); }   
+        }
+        .container {
+            display: flex;  
+            flex-wrap: nowrap; 
+            justify-content: center;  
+            padding: 30px;
+        }
+        .card {
+            background-color: white;
+            border: 10px solid #659df1;
+            border-radius: 60px;
+            margin: 10px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            overflow: hidden;
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card h2 {
+            margin: 15px 0;
+            color: #0066cc;
+        }
+        .card p {
+            padding: 0 15px;
+            font-size: 14px;
+            color: #666;
+        }
+        .card button {
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .card button:hover {
+            background-color: #004080;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+       مرحباً في موقع بوابه المكان المناسب لرحلتك
+    </header>
+
+    
+    <div class="marquee">
+         <span marquee> المطور : راغب محمد زاهر</span><br>
+       <br> <span> الرقم : 770599017</span> <br><br>
+        <span>مرحبًا بكم في موقع بوابة للرحلات , احجز تذكرتك الي اي مكان في العالم من منزلك</span><br>
+    </div>
+
+    
+    <div class="container">
+        
+        <div class="card">
+            <img src="dubai1.jpg" alt="دبي">
+            <h2>دبي، الإمارات</h2>
+            <p>استمتعوا بالأبراج الشاهقة والمناظر الصحراوية الفريدة في دبي.</p>
+            <button onclick="window.location.href='dubai.html'">دخول</button>
+        </div>
+
+        
+        <div class="card">
+            <img src="turkey1.jpg" alt="تركيا">
+            <h2>تركيا</h2>
+            <p>اكتشفوا الجمال التاريخي والطبيعي في تركيا.</p>
+            <button onclick="window.location.href='turkey.html'">دخول</button>
+        </div>
+
+        
+        <div class="card">
+            <img src="zwitserland1.jpg" alt="سويسرا">
+            <h2>سويسرا</h2>
+            <p>استمتعوا بالمناظر الجبلية الخلابة في سويسرا.</p>
+            <button onclick="window.location.href='switzerland.html'">دخول</button>
+        </div>
+
+        
+        <div class="card">
+            <img src="japan1.jpg" alt="اليابان">
+            <h2>اليابان</h2>
+            <p>تعرفوا على الثقافة اليابانية الحديثة والتقليدية.</p>
+            <button onclick="window.location.href='japan.html'">دخول</button>
+        </div>
+    </div>
+
+</body>
+</html>

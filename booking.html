@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حجز التذاكر</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #0066cc;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        table {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        table, th, td {
+            border: 1px solid #504df3;
+        }
+        th, td {
+            padding: 15px;
+            text-align: center;
+        }
+        th {
+            background-color: #0066cc;
+            color: white;
+        }
+        .booking-form {
+            background-color: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .booking-form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        .booking-form input, .booking-form select, .booking-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .booking-form input[type="radio"], .booking-form input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+        .booking-form input[type="range"] {
+            width: 100%;
+        }
+        .booking-form button {
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .booking-form button:hover {
+            background-color: #004080;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        حجز التذاكر
+    </header>
+
+    
+    <table>
+        <thead>
+            <tr>
+                <th>فئة التذكرة</th>
+                <th>وصف المقاعد والخدمات</th>
+                <th>السعر (بالدولار)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>VIP</td>
+                <td>مقاعد فسيحة مع خدمة VIP، وجبات فاخرة، وترفيه شخصي.</td>
+                <td>500$</td>
+            </tr>
+            <tr>
+                <td>الدرجة الأولى</td>
+                <td>مقاعد مريحة مع خدمة عالية الجودة، وجبات مميزة.</td>
+                <td>300$</td>
+            </tr>
+            <tr>
+                <td>المقاعد العادية</td>
+                <td>مقاعد عادية مع خدمة أساسية، وجبات خفيفة.</td>
+                <td>150$</td>
+            </tr>
+        </tbody>
+    </table>
+
+    
+    <table>
+        <thead>
+            <tr>
+                <th>موعد الرحلة</th>
+                <th>صالة الانتظار</th>
+                <th>الوجهة</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>10:00 صباحًا</td>
+                <td>صالة A</td>
+                <td>تركيا</td>
+            </tr>
+            <tr>
+                <td>02:00 مساءً</td>
+                <td>صالة B</td>
+                <td>سويسرا</td>
+            </tr>
+            <tr>
+                <td>06:00 مساءً</td>
+                <td>صالة C</td>
+                <td>الإمارات</td>
+            </tr>
+            <tr>
+                <td>10:00 مساءً</td>
+                <td>صالة D</td>
+                <td>اليابان</td>
+            </tr>
+        </tbody>
+    </table>
+
+    
+    <div class="booking-form">
+        <form>
+            
+            <label for="name">الاسم الرباعي:</label>
+            <input type="text" id="name" name="name" required>
+
+            
+            <label for="age">العمر:</label>
+            <input type="number" id="age" name="age" required>
+
+            
+            <label for="passport">رقم الجواز:</label>
+            <input type="text" id="passport" name="passport" required>
+
+            
+            <label>الجنس:</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">ذكر</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">أنثى</label>
+
+            
+            <label>مدة الرحلة:</label>
+            <input type="checkbox" id="week" name="duration" value="week">
+            <label for="week">أسبوع</label>
+            <input type="checkbox" id="month" name="duration" value="month">
+            <label for="month">شهر</label>
+            <input type="checkbox" id="more" name="duration" value="more">
+            <label for="more">أكثر من شهر</label>
+            <input type="checkbox" id="none" name="duration" value="none">
+            <label for="none">عدم الاختيار</label>
+
+            
+            <label for="tickets">عدد التذاكر (1-4):</label>
+            <input type="range" id="tickets" name="tickets" min="1" max="4" value="1" required>
+
+        
+            <label for="reason">سبب السفر:</label>
+            <select id="reason" name="reason" required>
+                <option value="treatment">علاج</option>
+                <option value="tourism">سياحة</option>
+                <option value="education">تعليم</option>
+                <option value="other">أخرى</option>
+            </select>
+
+            
+            <label for="files">إضافة ملفات (صورة الجواز، الهوية الشخصية، تأشيرة السفر):</label>
+            <input type="file" id="files" name="files" multiple required>
+
+            
+            <button type="submit">إرسال</button>
+            
+                
+            <button onclick="window.location.href='elbawabeh.html'">العودة إلى الصفحة الرئيسية,</button>
+        </form>
+    </div>
+
+</body>
+</html>
